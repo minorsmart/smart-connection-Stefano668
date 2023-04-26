@@ -1,0 +1,62 @@
+body {
+	font-family: Arial, sans-serif;
+	margin: 0;
+	padding: 0;
+}
+
+.rocket-container {
+	position: relative;
+	height: 200px;
+	overflow: hidden;
+}
+
+.rocket {
+	position: absolute;
+	top: 0;
+	left: 50%;
+	transform: translateX(-50%);
+	animation: rocket 2s linear infinite;
+}
+
+.content {
+	max-width: 800px;
+	margin: 0 auto;
+	padding: 50px;
+	text-align: center;
+}
+
+h1 {
+	font-size: 3em;
+	margin-bottom: 20px;
+}
+
+p {
+	font-size: 1.2em;
+	margin-bottom: 30px;
+}
+
+button {
+	background-color: #d10e2e;
+	color: #fff;
+	font-size: 1.0em;
+	padding: 10px 20px;
+	border: none;
+	border-radius: 20px;
+	cursor: pointer;
+}
+
+button:hover {
+	background-color: #be2121;
+}
+
+@keyframes rocket {
+	0% {
+		transform: translateX(-50%) translateY(0px);
+	}
+	50% {
+		transform: translateX(-50%) translateY(-100px);
+	}
+	100% {
+		transform: translateX(-50%) translateY(0px);
+	}
+}
