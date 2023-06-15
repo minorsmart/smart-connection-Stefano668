@@ -6,13 +6,15 @@ body {
 
 .rocket-container {
 	position: relative;
-	height: 200px;
-	overflow: hidden;
+	height: 300px;
+	
 }
 
 .rocket {
 	position: absolute;
 	top: 0;
+	margin-top: 100px;
+	
 	left: 50%;
 	transform: translateX(-50%);
 	animation: rocket 2s linear infinite;
@@ -21,8 +23,11 @@ body {
 .content {
 	max-width: 800px;
 	margin: 0 auto;
-	padding: 50px;
+	
 	text-align: center;
+	display: flex;
+	flex-direction: column;
+	
 }
 
 h1 {
@@ -43,6 +48,10 @@ button {
 	border: none;
 	border-radius: 20px;
 	cursor: pointer;
+	margin-top: 8px;
+	width: 200px;
+	margin-left: auto ;
+	margin-right: auto;
 }
 
 button:hover {
