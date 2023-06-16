@@ -1,22 +1,62 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 	<meta charset="UTF-8">
-	<title>Welkom op mijn portfolio</title>
+	<title>Portfolio Arjan</title>
 	<link rel="stylesheet" href="Stijl.css">
+	<style>
+		.hiddenText {
+			display: none;
+		}
+	</style>
+	<script>
+		function toggleText(buttonId) {
+			var buttonText = document.getElementById(buttonId).innerHTML;
+			var textElement = document.getElementById(buttonId + "-text");
+
+			if (textElement.style.display === "none") {
+				textElement.style.display = "block";
+				document.getElementById(buttonId).innerHTML = buttonText.replace("Show", "Hide");
+			} else {
+				textElement.style.display = "none";
+				document.getElementById(buttonId).innerHTML = buttonText.replace("Hide", "Show");
+			}
+		}
+	</script>
 </head>
 <body>
 	<div class="rocket-container">
-		<img src="raket.png" alt="Rocket" class="rocket">
+		<img src="raket klein.png" alt="Rocket" class="rocket">
 	</div>
 	<div class="content">
 		<h1>Welkom op mijn portfolio!</h1>
-		<p>Hoi! Ik ben Arjan Melchers, 23 jaar oud en studeer Communicatie aan de Hogeschool van Arnhem en Nijmegen. Voor de minor heb ik dit portfolio gemaakt. Ik heb veel kennis opgedaan buiten mijn eigen vakgebied. Kijk maar mee. :)</p>
-		<button>Smart Me </button>
-        <button>Smart Business </button>
-        <button>Smart Technology </button>
-        <button>Smart Connection </button>
-        <button>Smart Project </button>
+		<p>Hoi! Ik ben Arjan Melchers, 23 jaar oud en studeer Communicatie aan de Hogeschool van Arnhem en Nijmegen. Voor de minor heb ik dit portfolio gemaakt. Ik heb veel kennis opgedaan buiten mijn eigen vakgebied. Kijk maar mee door dubbel te klikken op een onderwerp.</p>
+		<button id="smartMeButton" onclick="toggleText('smartMeButton')">Smart Me <i class="glyphicon glyphicon-user"></i></button>
+		<div id="smartMeButton-text" class="hiddenText">
+			<p> Afgelopen halfjaar heb ik de minor <i>'Smart Industry'</i> gevolgd en veel geleerd op het gebied van bedrijfskunde en technologie. Als communicatie student leer je meer over marketingcommunicatie wat bij deze minor niet of zelden aan bod kwam.
+				<br> <br>In de eerste zes weken kregen we allerlei soorten workshops, die erg leuk waren!
+				Ik vond zelf de workshops die veel te maken hadden met bedrijfskunde het leukst, vooral omdat ik hier veel van leerde. Denk hieraan de BMC en TOM model. Hier zal ik onder de knop Smart Business nog meer over vertellen.
+			 <br> <br>
+			Voordat ik begon met de minor had ik een leerdoel opgesteld die waarbij ik tijdens de minor het maximale eruit wilde halen. Dit leerdoel was als volgt <i>'Meer inzicht krijgen in technologische veranderingen en hoe je dit goed kan toepassen binnen een bedrijf, denk hierbij aan communiceren'</i>
+		Dit leerdoel was vooral om meer te leren over bedrijfskunde en ik zou zeggen dat ik terug kan kijken op een leerzaam halfjaar. Ik zou je graag mee willen nemen naar het volgende onderdeel en wat ik daarbij geleerd heb. </p>
+		</div>
+		<button id="smartBusinessButton" onclick="toggleText('smartBusinessButton')">Smart Business <i class="glyphicon glyphicon-briefcase"></i></button>
+		<div id="smartBusinessButton-text" class="hiddenText">
+			<p>Business</p>
+		</div>
+		<button id="smartTechnologyButton" onclick="toggleText('smartTechnologyButton')">Smart Technology <i class="glyphicon glyphicon-phone"></i></button>
+		<div id="smartTechnologyButton-text" class="hiddenText">
+			<p>Smart Technology</p>
+		</div>
+		<button id="smartConnectionButton" onclick="toggleText('smartConnectionButton')">Smart Connection <i class="glyphicon glyphicon-book"></i></button>
+		<div id="smartConnectionButton-text" class="hiddenText">
+			<p>Smart Connection</p>
+		</div>
+		<button id="smartProjectButton" onclick="toggleText('smartProjectButton')">Smart Project <i class="glyphicon glyphicon-pencil"></i></button>
+		<div id="smartProjectButton-text" class="hiddenText">
+			<p>Smart Project tetste ste</p>
+		</div>
 	</div>
 </body>
 </html>
